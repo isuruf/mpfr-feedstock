@@ -5,21 +5,29 @@ package:
   version: {{ version }}
 
 source:
-  fn: mpfr-{{ version }}.tar.bz2
-  url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz
-  md5: 482ab3c120ffc959f631b4ba9ec59a46
+  fn: mpfr-{{ version }}.tar.bz2                              # [unix]
+  url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz  # [unix]
+  md5: 482ab3c120ffc959f631b4ba9ec59a46                       # [unix]
+  git_url: https://github.com/BrianGladman/mpfr               # [win]
+  git_rev: 30e80d67e4c1e287ae2f10110ec03b5630596f4a           # [win]
 
 build:
   number: 1
-  skip: true  # [win]
+  skip: true          # [win and not py35]
+  features:
+    - vc14            # [win and py35]
 
 requirements:
   build:
-    - m4
-    - libtool
-    - gmp
+    - m4              # [unix]
+    - libtool         # [unix]
+    - gmp             # [unix]
+    - python          # [win]
+    - mpir            # [win]
   run:
-    - gmp
+    - gmp             # [unix]
+    - python          # [win]
+    - mpir            # [win]
 
 test:
   commands:
