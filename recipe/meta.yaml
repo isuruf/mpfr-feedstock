@@ -24,12 +24,12 @@ requirements:
     - m4              # [unix]
     - libtool         # [unix]
     - gmp             # [unix]
-    - python          # [win]
+    - vc 14           # [win]
     - mpir            # [win]
   run:
     - gmp             # [unix]
     - mpir            # [win]
-    - python          # [win]
+    - vc 14           # [win]
 
 test:
   commands:
