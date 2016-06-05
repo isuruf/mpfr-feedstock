@@ -30,7 +30,7 @@ copy dll\%PLATFORM%\Release\mpfr.lib %LIBRARY_LIB%\mpfr.lib
 copy dll\%PLATFORM%\Release\mpfr.dll %LIBRARY_BIN%\mpfr.dll
 copy dll\%PLATFORM%\Release\mpfr.pdb %LIBRARY_BIN%\mpfr.pdb
 
-copy lib\%PLATFORM%\Release\mpfr.lib %LIBRARY_BIN%\mpfr_static.lib
+copy lib\%PLATFORM%\Release\mpfr.lib %LIBRARY_LIB%\mpfr_static.lib
 
 cd ..
 copy dll\%PLATFORM%\Release\mpfr.h %LIBRARY_INC%\mpfr.h
