@@ -26,14 +26,17 @@ requirements:
     - mpir            # [win]
   run:
     - gmp             # [unix]
-    - python          # [win]
     - mpir            # [win]
 
 test:
-  commands:
-    - test -f ${PREFIX}/lib/libmpfr.a      # [unix]
-    - test -f ${PREFIX}/lib/libmpfr.dylib  # [osx]
-    - test -f ${PREFIX}/lib/libmpfr.so     # [linux]
+  commands: 
+    - if not exist %LIBRARY_INC%\\mpfr.h exit 1                # [win]
+    - if not exist %LIBRARY_LIB%\\mpfr.lib exit 1              # [win]
+    - if not exist %LIBRARY_BIN%\\mpfr.dll exit 1              # [win]
+    - if not exist %LIBRARY_LIB%\\mpfr_static.lib exit 1       # [win]
+    - test -f ${PREFIX}/lib/libmpfr.a                          # [unix]
+    - test -f ${PREFIX}/lib/libmpfr.dylib                      # [osx]
+    - test -f ${PREFIX}/lib/libmpfr.so                         # [linux]
 
 about:
   home: http://www.mpfr.org/
