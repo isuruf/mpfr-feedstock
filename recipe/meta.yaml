@@ -23,10 +23,10 @@ requirements:
     - libtool         # [unix]
     - gmp             # [unix]
     - python          # [win]
-    - mpir            # [win]
+    - mpir            # [win and py35]
   run:
     - gmp             # [unix]
-    - mpir            # [win]
+    - mpir            # [win and py35]
 
 test:
   commands: 
