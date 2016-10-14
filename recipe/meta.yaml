@@ -8,10 +8,10 @@ package:
 source:
   fn: mpfr-{{ version }}.tar.bz2                                                    # [unix]
   url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz                        # [unix]
-  sha256sum: f4eb5070883aee3fd8b927751ea63ff95aebe24418cde852439ce74c3dd2513c       # [unix]
+  sha256: f4eb5070883aee3fd8b927751ea63ff95aebe24418cde852439ce74c3dd2513c          # [unix]
   fn: {{ commit }}.zip                                                              # [win]
   url: https://github.com/BrianGladman/mpfr/archive/{{ commit }}.zip                # [win]
-  sha256sum: 050eb5f8c40e634d2681b5d84764b75bb103c35a7491e999d6a5b3a94b34f325       # [win]
+  sha256: 050eb5f8c40e634d2681b5d84764b75bb103c35a7491e999d6a5b3a94b34f325          # [win]
 
 build:
   number: 0
