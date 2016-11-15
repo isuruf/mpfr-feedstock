@@ -14,7 +14,7 @@ source:
   md5: 9d84b0d1ac32244e837d1b220b0ceb73                                     # [win]
 
 build:
-  number: 1
+  number: 2
   features:
     - vc14            # [win]
   msvc_compiler: 14.0
