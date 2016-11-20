@@ -21,6 +21,7 @@ build:
 
 requirements:
   build:
+    - toolchain
     - m4              # [unix]
     - libtool         # [unix]
     - gmp             # [unix]
