@@ -6,10 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  fn: mpfr-{{ version }}.tar.bz2                                            # [unix]
+  fn: mpfr-{{ commit }}-{{ version }}.zip                                   # [unix]
   url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz                # [unix]
   md5: 482ab3c120ffc959f631b4ba9ec59a46                                     # [unix]
-  fn: mpfr-{{ commit }}.zip                                                 # [win]
+  fn: mpfr-{{ commit }}-{{ version }}.zip                                   # [win]
   url: https://github.com/BrianGladman/mpfr/archive/{{ commit }}.zip        # [win]
   md5: 9d84b0d1ac32244e837d1b220b0ceb73                                     # [win]
 
