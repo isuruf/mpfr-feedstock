@@ -12,9 +12,13 @@ mkdir mpir\lib\%PLATFORM%\Release
 REM copy mpir headers
 xcopy %LIBRARY_INC%\*.h mpir\lib\%PLATFORM%\Release\ /E
 xcopy %LIBRARY_INC%\*.h mpir\dll\%PLATFORM%\Release\ /E
+copy %LIBRARY_INC%\gmp-config.h mpir\lib\%PLATFORM%\Release\config.h
+copy %LIBRARY_INC%\gmp-config.h mpir\dll\%PLATFORM%\Release\config.h
+copy %LIBRARY_INC%\gmp-longlong.h mpir\lib\%PLATFORM%\Release\longlong.h
+copy %LIBRARY_INC%\gmp-longlong.h mpir\dll\%PLATFORM%\Release\longlong.h
 
 REM copy mpir libraries
-copy %LIBRARY_LIB%\mpir.dll mpir\dll\%PLATFORM%\Release\mpir.dll
+copy %LIBRARY_BIN%\mpir.dll mpir\dll\%PLATFORM%\Release\mpir.dll
 copy %LIBRARY_LIB%\mpir.lib mpir\dll\%PLATFORM%\Release\mpir.lib
 copy %LIBRARY_LIB%\mpir_static.lib mpir\lib\%PLATFORM%\Release\mpir.lib
 

@@ -14,7 +14,7 @@ source:
   md5: 9d84b0d1ac32244e837d1b220b0ceb73                                     # [win]
 
 build:
-  number: 2
+  number: 3
   features:
     - vc14            # [win]
   msvc_compiler: 14.0
@@ -45,6 +45,7 @@ test:
 about:
   home: http://www.mpfr.org/
   license: LGPL 3
+  license_file: {{ SRC_DIR }}/COPYING.LESSER
   summary: The MPFR library is a C library for multiple-precision floating-point computations with correct rounding.
 
 extra:
