@@ -15,12 +15,13 @@ source:
 
 build:
   number: 0
-  skip: true          # [win and not py35]
   features:
-    - vc14            # [win and py35]
+    - vc14            # [win]
+  msvc_compiler: 14.0
 
 requirements:
   build:
+    - toolchain
     - m4              # [unix]
     - libtool         # [unix]
     - gmp             # [unix]
@@ -44,6 +45,7 @@ test:
 about:
   home: http://www.mpfr.org/
   license: LGPL 3
+  license_file: {{ SRC_DIR }}/COPYING.LESSER
   summary: The MPFR library is a C library for multiple-precision floating-point computations with correct rounding.
 
 extra:
