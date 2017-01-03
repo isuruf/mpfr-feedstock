@@ -1,20 +1,20 @@
-{% set version = "3.1.4" %}
-{% set commit = "71f5b2d5b68192424fce6bd1768a889710fc5933" %}
+{% set version = "3.1.5" %}
+{% set commit = "1535d223d5df0c8f6a2722796efb96c845c25405" %}
 
 package:
   name: mpfr
   version: {{ version }}
 
 source:
-  fn: mpfr-{{ version }}.tar.bz2                                            # [unix]
-  url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz                # [unix]
-  md5: 482ab3c120ffc959f631b4ba9ec59a46                                     # [unix]
-  fn: mpfr-{{ commit }}.zip                                                 # [win]
-  url: https://github.com/BrianGladman/mpfr/archive/{{ commit }}.zip        # [win]
-  md5: 9d84b0d1ac32244e837d1b220b0ceb73                                     # [win]
+  fn: mpfr-{{ version }}.tar.bz2                                                    # [unix]
+  url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz                        # [unix]
+  sha256: f4eb5070883aee3fd8b927751ea63ff95aebe24418cde852439ce74c3dd2513c          # [unix]
+  fn: {{ commit }}.zip                                                              # [win]
+  url: https://github.com/BrianGladman/mpfr/archive/{{ commit }}.zip                # [win]
+  sha256: 050eb5f8c40e634d2681b5d84764b75bb103c35a7491e999d6a5b3a94b34f325          # [win]
 
 build:
-  number: 3
+  number: 0
   features:
     - vc14            # [win]
   msvc_compiler: 14.0
