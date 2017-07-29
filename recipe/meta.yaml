@@ -20,7 +20,7 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - toolchain3
     - m4              # [unix]
     - libtool         # [unix]
     - gmp             # [unix]
