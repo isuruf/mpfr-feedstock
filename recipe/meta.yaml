@@ -8,7 +8,7 @@ source:
   fn: mpfr-{{ version }}.tar.bz2                                                                        # [unix]
   url: http://ftp.gnu.org/gnu/mpfr/mpfr-{{ version }}.tar.gz                                            # [unix]
   sha256: f4eb5070883aee3fd8b927751ea63ff95aebe24418cde852439ce74c3dd2513c                              # [unix]
-  fn: {{ commit }}.zip                                                                                  # [win]
+  fn: mpfr-{{ version }}-win.zip                                                                        # [win]
   url: https://github.com/isuruf/mpfr/releases/download/{{ version }}-win/mpfr-{{ version }}-win.zip    # [win]
   sha256: 179d0e3de99926d4eee726ef1ee9daa6ccc44301572954702c6c3544bb3d8667                              # [win]
 
