@@ -21,16 +21,8 @@ target_compile_definitions(mpfr PRIVATE HAVE_STDINT_H)
 target_compile_definitions(mpfr PRIVATE HAVE_STDARG)
 target_compile_definitions(mpfr PRIVATE HAVE_LONG_LONG)
 target_compile_definitions(mpfr PRIVATE __tune_core2__)
-
-find_path(MPFR_HAVE_GMP_IMPL "gmp-impl.h")
-if (${MPFR_HAVE_GMP_IMPL})
-    target_compile_definitions(mpfr PRIVATE MPFR_HAVE_GMP_IMPL)
-endif()
-
-find_path(HAVE_CONFIG_H "config.h")
-if (${HAVE_CONFIG_H})
-    target_compile_definitions(mpfr PRIVATE HAVE_CONFIG_H)
-endif()
+target_compile_definitions(mpfr PRIVATE MPFR_HAVE_GMP_IMPL)
+target_compile_definitions(mpfr PRIVATE HAVE_CONFIG_H)
 
 if(BUILD_SHARED_LIBS)
     target_compile_definitions(mpfr PRIVATE __GMP_LIBGMP_DLL)
